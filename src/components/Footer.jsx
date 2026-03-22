@@ -114,7 +114,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 font-inter text-sm text-center sm:text-left">
-            © 2025 Hilal Distributors. All Rights Reserved.
+            © 2026 Hilal Distributors. All Rights Reserved.
           </p>
           <button
             onClick={scrollToTop}
