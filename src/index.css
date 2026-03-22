@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1A1A1A;
+  overflow-x: hidden;
+  background: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D32F2F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #EF5350;
+}
+
+/* ===== FLAME PARTICLES ===== */
+.flame-particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: riseUp linear infinite;
+}
+
+@keyframes riseUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-120vh) scale(0.2);
+  }
+}
+
+/* ===== WHATSAPP PULSE ===== */
+.whatsapp-pulse-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 3px solid #25D366;
+  animation: whatsappPulse 2s ease-out infinite;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* ===== FREE DELIVERY BADGE ===== */
+.delivery-badge {
+  animation: deliveryBounce 2s ease-in-out infinite;
+}
+
+@keyframes deliveryBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ===== BEST VALUE BADGE ===== */
+.best-value-badge {
+  animation: bestValuePulse 2s ease-in-out infinite;
+}
+
+@keyframes bestValuePulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(253, 216, 53, 0.7);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px rgba(253, 216, 53, 0.0);
+    transform: scale(1.05);
+  }
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #FDD835, #FF6F00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== GLASS EFFECT ===== */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ===== HERO BACKGROUND ===== */
+.hero-bg {
+  background: linear-gradient(135deg, #1A1A1A 0%, #2D1010 40%, #3D1515 60%, #1A1A1A 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 80%, rgba(211, 47, 47, 0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 20%, rgba(253, 216, 53, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ===== SECTION PATTERNS ===== */
+.section-pattern {
+  background-image: radial-gradient(rgba(211, 47, 47, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+/* ===== MOBILE CALL BAR ===== */
+@media (min-width: 641px) {
+  .mobile-call-bar {
+    display: none !important;
+  }
+}

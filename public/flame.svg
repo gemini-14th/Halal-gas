@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="flameGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#D32F2F"/>
+      <stop offset="50%" stop-color="#FF6F00"/>
+      <stop offset="100%" stop-color="#FDD835"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 4C32 4 16 24 16 40C16 48.8 23.2 56 32 56C40.8 56 48 48.8 48 40C48 24 32 4 32 4Z" fill="url(#flameGrad)"/>
+  <path d="M32 24C32 24 24 34 24 42C24 46.4 27.6 50 32 50C36.4 50 40 46.4 40 42C40 34 32 24 32 24Z" fill="#FDD835" opacity="0.8"/>
+</svg>
